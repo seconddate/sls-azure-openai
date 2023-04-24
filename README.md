@@ -43,7 +43,17 @@ $ az account set -s <subscriptionId>
 $ az ad sp create-for-rbac
 ```
 
-### 5. deploy function
+### 5. Create .env
+
+```sh
+cp .env.sample .env
+# 키 작성
+OPENAI_API_KEY=YOUR_API_KEY
+OPENAI_ENDPOINT=YOUR_ENDPOINT
+OPENAI_MODEL_NAME=YOUR_MODEL_NAME
+```
+
+### 6. deploy function
 
 ```sh
 $ sls deploy -s dev
